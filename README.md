@@ -1,3 +1,4 @@
+# Balans
 <a href="https://coderpro.net" target="_top"><img src="https://coderpro.net/media/1024/coderpro_logo_rounded_extra-90x90.webp" align="right" align="right" /></a>
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -25,5 +26,4 @@
 [github-shield]: https://img.shields.io/github/followers/coderpros?label=Follow&style=social
 [github-follow-url]: https://img.shields.io/twitter/follow/coderpronet?style=social
 
-# Balans
 > An example book SPA using ReactJS & a .Net 5 Web API.
