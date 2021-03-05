@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net5.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/84c290c7-23ff-45f5-9f6b-41a65b683505/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/mittbalans"
+}
