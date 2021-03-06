@@ -1,49 +1,60 @@
-import React from 'react';
-import axios from 'axios';
-import {getToken, authContext} from './adal-config';
-import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState, useEffect } from "react";
+
 import logo from './logo.svg';
+import './App.css';
 
-export class App extends React.Component {
-    state = {
-        values: null,
-        user: null
-    };
 
-    async componentDidMount() {
-        const config = {
-            headers: {
-                Authorization: "Bearer" + getToken(),
-                Accept: "application/json, text/plain, */*",
-                'Context-Type': "application/json"
-            }
-        }
+const App = () => {
+  const [books, setBooks] = useState([]);
 
-        var response = await axios.get(`https://jolly-bush-061573503.azurestaticapps.net/api/Books`, config);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/books", {headers: new Headers({"Accept": "application/json"})})
+      .then(response => response.json())
+      .then(data => {
+        setBooks(data);
+      });
+  }, []);
 
-        this.setState({values: response.data, user: authContext.getCachedUser().profile});
-    }
-
-    render() {
-        if(this.state.values) {
-            console.log(this.state.values);
-            
-            return (
-                <div>
-                    Hello React {this.state.user.name}!
-                    <ul>
-                    {
-                        this.state.values.map((item) => {
-                            return(<li>{item.Title}</li>);
-                        })
-                    }
-                    </ul>
-                </div>
-            );
-        } else {
-            return(<div class="container py4">Loading...</div>)
-        }
-    }
+  return (
+    <table>
+      <thead>
+        <tr key="header">
+          <th>Id</th>
+          <th>Category</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Author</th>
+        </tr>
+      </thead>
+      <tbody>         
+      <>
+        {books.map(book => (
+        <BookRow
+          id={book.Id}
+          category={book.Category}
+          name={book.Name}
+          price={book.Price}
+          author={book.Author}
+        />
+      ))}
+      </>
+      </tbody>
+      </table>
+  );
 }
+
+const BookRow  = props => {
+  return (
+  <>
+  <tr key={props.id.toString()}>
+    <td>{props.id}</td>
+    <td>{props.category}</td>
+    <td>{props.name}</td>
+    <td>{props.price}</td>
+    <td>{props.author}</td>
+  </tr>
+  </>
+  );
+};
 
 export default App;
