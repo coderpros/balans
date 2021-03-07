@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Web\\ASP.Net\\Core\\Books\\Books.csproj": {}
+    "D:\\Projects\\Web\\ASP.Net\\Core\\balans\\Books.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Web\\ASP.Net\\Core\\Books\\Books.csproj": {
+    "D:\\Projects\\Web\\ASP.Net\\Core\\balans\\Books.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Web\\ASP.Net\\Core\\Books\\Books.csproj",
+        "projectUniqueName": "D:\\Projects\\Web\\ASP.Net\\Core\\balans\\Books.csproj",
         "projectName": "Books",
-        "projectPath": "D:\\Projects\\Web\\ASP.Net\\Core\\Books\\Books.csproj",
+        "projectPath": "D:\\Projects\\Web\\ASP.Net\\Core\\balans\\Books.csproj",
         "packagesPath": "C:\\Users\\BrandonOsborne\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Web\\ASP.Net\\Core\\Books\\obj\\",
+        "outputPath": "D:\\Projects\\Web\\ASP.Net\\Core\\balans\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\BrandonOsborne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -48,6 +50,10 @@
               "target": "Package",
               "version": "[5.0.3, )"
             },
+            "Microsoft.NET.Sdk.Functions": {
+              "target": "Package",
+              "version": "[3.0.11, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.11.6, )"
@@ -72,14 +78,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
