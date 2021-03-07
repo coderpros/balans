@@ -1,5 +1,5 @@
 
-namespace Balans
+namespace Balans.Api
 {
     using System;
     using System.IO;
