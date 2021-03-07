@@ -96,3 +96,5 @@ D:\Projects\Web\ASP.Net\Core\balans\obj\Debug\net5.0\Books.csproj.CopyComplete
 D:\Projects\Web\ASP.Net\Core\balans\obj\Debug\net5.0\Books.dll
 D:\Projects\Web\ASP.Net\Core\balans\obj\Debug\net5.0\ref\Books.dll
 D:\Projects\Web\ASP.Net\Core\balans\obj\Debug\net5.0\Books.pdb
+D:\Projects\Web\ASP.Net\Core\balans\bin\Debug\net5.0\host.json
+D:\Projects\Web\ASP.Net\Core\balans\bin\Debug\net5.0\local.settings.json
