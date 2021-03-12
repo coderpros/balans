@@ -3,6 +3,7 @@ namespace Books.Api.Models
     public class BookstoreDatabaseSettings : IBookstoreDatabaseSettings
     {
         public string BooksCollectionName { get; set; }
+        public string GroupsCollectionName { get; set; }
         public string ConnectionString { get; set; }
         public string DatabaseName { get; set; }
     }
@@ -10,6 +11,7 @@ namespace Books.Api.Models
     public interface IBookstoreDatabaseSettings
     {
         string BooksCollectionName { get; set; }
+        string GroupsCollectionName { get;set; }
         string ConnectionString { get; set; }
         string DatabaseName { get; set; }
     }

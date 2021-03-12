@@ -25,6 +25,7 @@ namespace Books.Api.Services
 
         public Book Create(Book book)
         {
+            book.Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
             _books.InsertOne(book);
             return book;
         }
