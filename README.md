@@ -28,9 +28,11 @@
 [github-shield]: https://img.shields.io/github/followers/coderpros?label=Follow&style=social
 [github-follow-url]: https://img.shields.io/twitter/follow/coderpronet?style=social
 
->An example book SPA created with ReactJS & ASP.Net 5.
+>An example book manager SPA created with ReactJS & ASP.Net 5. This project utilizes Azure Active Directory B2C for authentication and user flows 
+>along with a simple homegrown custom role manger.
 
 ## Change Log
-
+- 2020/03/12:
+  - Release Candidate 1
 - 2020/02/28:
   - Created API to handle Book CRUD operations.
