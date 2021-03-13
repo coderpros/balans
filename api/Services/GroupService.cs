@@ -31,8 +31,11 @@ namespace Books.Api.Services
         {
             group.Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
 
-            _groups.InsertOne(group);
-            
+            if(_groups.CountDocuments(g => g.AzId == group.AzId && g.GroupName == group.GroupName) < 1)
+            {
+                _groups.InsertOne(group);
+            }
+
             return group;
         }
     }

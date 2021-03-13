@@ -62,7 +62,7 @@ const BookContent = () => {
   const updateData = (id: any, updatedBook: any) => {
     setEditing(false);
 
-    axios.put(`${Constants.apiRoot}Book/${id}`, updatedBook).then(function(test) {
+    axios.put(`${Constants.apiRoot}Book/${id}`, updatedBook).then(function(res) {
       setBooks(books.map((book: { Id: any; Category: string; Name: string; Price: string; Author: string; }) => (book.Id === id ? updatedBook : book)))
     });
   }
