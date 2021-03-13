@@ -33,5 +33,26 @@ namespace Books.Api.Controllers
 
             return groups;
         }
+
+        [HttpGet("{id:length(24)}", Name = "GetUserGroup")]
+        public ActionResult<Models.Group> GetUserGroup(string id)
+        {
+            var group = _groupService.GetGroup(id);
+
+            if (group == null)
+            {
+                return NotFound();
+            }
+
+            return group;
+        }
+
+        [HttpPost]
+        public ActionResult<Models.Group> Create(Models.Group group)
+        {
+            _groupService.Create(group);
+
+            return CreatedAtRoute("GetUserGroup", new { id = group.Id.ToString() }, group);
+        }
     }
 }

@@ -62,4 +62,7 @@ export class AuthService {
   public async isAuthenticated(): Promise<boolean> {
     return await this.getUser() != null;
   }
+
+  public editProfile(): void {
+  }
 }

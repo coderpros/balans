@@ -23,5 +23,17 @@ namespace Books.Api.Services
 
         public List<Models.Group> Get(string id) =>
             _groups.Find<Group>(group => group.AzId == id).ToList();
+
+        public Models.Group GetGroup(string id) => 
+            _groups.Find<Group>(group => group.Id == id).FirstOrDefault();
+
+            public Group Create(Models.Group group)
+        {
+            group.Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
+
+            _groups.InsertOne(group);
+            
+            return group;
+        }
     }
 }

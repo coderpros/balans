@@ -31,6 +31,10 @@ export default class TopContent extends React.Component<any, any> {
     this.authService.login();
   };
 
+  public editProfile = () => {
+    this.authService.editProfile();
+  }
+
   public callApi = () => {
     this.apiService
       .callApi()
@@ -95,6 +99,7 @@ export default class TopContent extends React.Component<any, any> {
           renewToken={this.renewToken}
           getUser={this.getUser}
           callApi={this.callApi}
+          editProfile={this.editProfile}
         />
         
         {Constants.debug &&
